@@ -1,0 +1,29 @@
+#main {
+    height: 100vh;
+    width: 100%;
+}  
+
+#embed {
+    width: 100%;
+    height: 100%;
+}
+
+#tools-btn {
+    width: 100px;
+    height: 40px;
+}
+
+#tool-btn-cont {
+    height: 50px;
+    background-color:rgba(0, 0, 0, 0);
+    align-items: end;
+}
+
+#tool-box {
+    height: 100%;
+    overflow-y: scroll;
+}
+
+#range-label {
+    color: white;
+}

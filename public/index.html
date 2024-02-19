@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.2/dist/cerulean/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style/style.css">
+  </head>
+  <body class="bg-dark">
+    <header>
+        <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">Site-builder</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarColor01">
+                <ul class="navbar-nav me-auto">
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Grid</a>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item" href="#">Add Row</a>
+                      <a class="dropdown-item" href="#">Remove Row</a>
+                      <a class="dropdown-item" href="#">Add Column</a>
+                      <a class="dropdown-item" href="#">Remove Columns</a>
+                    </div>
+                  </li>
+                </ul>
+                <form class="d-flex">
+                  <input class="form-control me-sm-2" type="search" placeholder="Search">
+                  <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button>
+                </form>
+              </div>
+            </div>
+          </nav>
+    </header>
+    <div id="tool-btn-cont" class="container-fluid d-flex fixed-bottom justify-content-center">
+        <button id="tools-btn" class="btn btn-dark" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">Tools</button>
+    </div>    
+    <div class="offcanvas offcanvas-bottom" data-bs-scroll="true" data-bs-backdrop="false" tabindex="-1" id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+        <div class="offcanvas-header bg-primary">
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div id="tool-box" class="container-fluid bg-dark">
+            <div class="row w-100 container-fluid mt-2">
+                <div class="col d-flex justify-content-center">
+                    <button type="button" class="btn btn-primary tool">Primary</button>
+                </div>
+                <div class="col d-flex justify-content-center">
+                    <button type="button" class="btn btn-secondary">Secondary</button>
+                </div>
+                <div class="col d-flex justify-content-center">
+                    <button type="button" class="btn btn-success">Success</button>
+                </div>
+                <div class="col d-flex justify-content-center">
+                    <button type="button" class="btn btn-danger">Danger</button>
+                </div>
+                <div class="col d-flex justify-content-center">
+                    <button type="button" class="btn btn-warning">Warning</button>
+                </div>
+            </div>
+            <div class="row w-100 container-fluid mt-2">
+                <div class="col d-flex justify-content-center">
+                    <button type="button" class="btn btn-primary">Primary</button>
+                </div>
+                <div class="col d-flex justify-content-center">
+                    <button type="button" class="btn btn-secondary">Secondary</button>
+                </div>
+                <div class="col  d-flex justify-content-center">
+                    <button type="button" class="btn btn-success">Success</button>
+                </div>
+                <div class="col d-flex justify-content-center">
+                    <button type="button" class="btn btn-danger">Danger</button>
+                </div>
+                <div class="col d-flex justify-content-center">
+                    <button type="button" class="btn btn-warning">Warning</button>
+                </div>
+            </div>
+            <div class="row w-100 container-fluid mt-2">
+                <div class="col d-flex justify-content-center">
+                    <button type="button" class="btn btn-primary">Primary</button>
+                </div>
+                <div class="col d-flex justify-content-center">
+                    <button type="button" class="btn btn-secondary">Secondary</button>
+                </div>
+                <div class="col  d-flex justify-content-center">
+                    <button type="button" class="btn btn-success">Success</button>
+                </div>
+                <div class="col d-flex justify-content-center">
+                    <button type="button" class="btn btn-danger">Danger</button>
+                </div>
+                <div class="col d-flex justify-content-center">
+                    <button type="button" class="btn btn-warning">Warning</button>
+                </div>
+            </div>
+            <div class="row w-100 container-fluid mt-2">
+                <div class="col d-flex justify-content-center">
+                    <button type="button" class="btn btn-primary">Primary</button>
+                </div>
+                <div class="col d-flex justify-content-center">
+                    <button type="button" class="btn btn-secondary">Secondary</button>
+                </div>
+                <div class="col  d-flex justify-content-center">
+                    <button type="button" class="btn btn-success">Success</button>
+                </div>
+                <div class="col d-flex justify-content-center">
+                    <button type="button" class="btn btn-danger">Danger</button>
+                </div>
+                <div class="col d-flex justify-content-center">
+                    <button type="button" class="btn btn-warning">Warning</button>
+                </div>
+            </div>
+        </div>
+      </div>
+    <div class="container-fluid text-center"> 
+        <label id="range-label" for="customRange1" class="form-label">100%</label>
+        <input oninput="change()" value="10" type="range" class="form-range" id="zoom-range" min="0" max="10">
+    </div>
+    <div id="main" class="container-fluid m-0 p-3 pb-3">
+        <iframe id="embed" src="embed.html" frameborder="0"></iframe>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="js/index.js"></script>
+  </body>
+</html>
