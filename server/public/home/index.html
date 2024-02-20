@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Bootstrap demo</title>
     <link href="https://cdn.jsdelivr.net/npm/bootswatch@5.3.2/dist/cerulean/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style.css">
   </head>
   <body class="bg-light">
     <header>
@@ -111,7 +111,6 @@
         </div>
       </div>
     <div id="main">
-
         <ul class="nav nav-tabs" id="myTab" role="tablist">
             <li class="nav-item" role="presentation">
               <button class="nav-link  active" id="design-tab" data-bs-toggle="tab" data-bs-target="#design-tab-pane" type="button" role="tab" aria-controls="design-tab-pane" aria-selected="true">Designer</button>
@@ -131,11 +130,9 @@
                 <div class="container-fluid" id="designer-container">
                     <div id="designer-body" class="container-fluid">
                         <div class="row design-row">
-                            <div class="resizer-t resizer sticky-top"></div> 
                             <div class="col design-column">
                             </div>
                             <div class="col design-column"></div>
-                            <div class="resizer-b resizer sticky-bottom"></div> 
                         </div>
                         <div class="row design-row">
                           <div class="col design-column"></div>
@@ -145,17 +142,24 @@
                 </div>
             </div>
             <div class="tab-pane fade" id="preview-tab-pane" role="tabpanel" aria-labelledby="preview-tab" tabindex="0">
-                <iframe id="embed" src="embed.html" frameborder="0"></iframe>
+                <iframe id="embed" src="embed/embed.html" frameborder="0"></iframe>
             </div>
             <div class="tab-pane fade" id="html-tab-pane" role="tabpanel" aria-labelledby="html-tab" tabindex="0">...</div>
             <div class="tab-pane fade" id="css-tab-pane" role="tabpanel" aria-labelledby="css-tab" tabindex="0">...</div>
         </div>
-        <div id="tool-bar" class="container-fluid d-inline-flex text-center fixed-bottom bg-light"> 
-            <input oninput="change()" value="10" type="range" class="form-range" id="zoom-range" min="0" max="10">
+        <div id="tool-bar" class="row text-center fixed-bottom bg-light p-0 m-0">
+            <div class="col col-3 p-0 m-0 d-flex flex-column justify-content-center">
+                <input oninput="change()" value="10" type="range" class="form-range" id="zoom-range" min="0" max="10">
+            </div>
+            <div class="col col-1 p-0 m-0 d-flex flex-column justify-content-center">
+                <label id="range-label" for="zoom-range" class="form-label ">100%</label>
+            </div>
+            <div class="col col-8 m-0 py-1 container-fluid">
+                <button id="save-btn" type="button" class="btn btn-outline-primary float-end">Save</button>
+            </div>            
         </div>
     </div>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
-    <script src="js/index.js"></script>
-    <script src="js/embed.js"></script>
+    <script src="index.js"></script>
     </body>
 </html>
