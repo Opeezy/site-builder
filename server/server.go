@@ -27,12 +27,17 @@ func embedHandler(w http.ResponseWriter, r *http.Request) {
 }
 
 func main() {
-	key, exists := os.LookupEnv("PORT")
+	portKey, exists := os.LookupEnv("PORT")
 	if !exists {
 		log.Fatal("No port key found")
 	}
-	port := fmt.Sprintf(":%v", key)
-	http.Handle("/", http.StripPrefix("/", http.FileServer(http.Dir("./public/home"))))
+	homeKey, exists := os.LookupEnv("HOME_FILES")
+	if !exists {
+		log.Fatal("No home files key found")
+	}
+	port := fmt.Sprintf(":%v", portKey)
+
+	http.Handle("/", http.StripPrefix("/", http.FileServer(http.Dir(homeKey))))
 	http.HandleFunc("/save", embedHandler)
 
 	log.Println("Starting server")
