@@ -10,3 +10,6 @@ for (page of pages) {
     page.addEventListener("click", function() {
     })
 }
+
+
+

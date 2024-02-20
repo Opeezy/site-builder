@@ -1,3 +1,7 @@
-var mouseInEmbed = false
 
-document.querySelector("body").addEventListener("mouseenter", function() {mouseInEmbed=true;console.log(mouseInEmbed)})
+
+function preview() {
+    let designBody = document.getElementById("designer-body")
+    let embedBody = document.getElementById("parent")
+    console.log(designBody, embedBody)
+}
