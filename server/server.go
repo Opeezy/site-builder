@@ -7,6 +7,7 @@ import (
 	"log"
 	"net/http"
 	"os"
+	"os/exec"
 
 	"github.com/joho/godotenv"
 )
@@ -17,13 +18,26 @@ func init() {
 	}
 }
 
+// type Child interface {
+// 	())
+// }
+
+type Div struct {
+	Classlist string `json:"class"`
+	Children  interface {
+	}
+}
+
 func embedHandler(w http.ResponseWriter, r *http.Request) {
 	b, err := io.ReadAll(r.Body)
 	if err != nil {
 		log.Fatalln(err)
 	}
 
-	fmt.Println(string(b))
+	cmd := exec.Command("python", "pytl/pytl.py", string(b))
+	cmd.Stdout = os.Stdout
+	cmd.Stderr = os.Stderr
+	log.Println(cmd.Run())
 }
 
 func main() {

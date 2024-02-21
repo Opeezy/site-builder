@@ -30,6 +30,7 @@ class EmbedData {
         for(var i = 0; i< div.children.length;i++){
             tag['children'].push(this.fillData(div.children[i]))
         }
+        tag['children'] = tag['children'].flat(Infinity)
         return tag
     }
 }
